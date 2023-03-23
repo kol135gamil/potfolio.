@@ -1,0 +1,36 @@
+# This is a 🅱asic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events 🅱ut only for the "main" 🅱ranch
+  push:
+    🅱ranches: [ "main" ]
+  pull_request:
+    🅱ranches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions ta🅱
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jo🅱s that can run sequentially or in parallel
+jo🅱s:
+  # This workflow contains a single jo🅱 called "🅱uild"
+  🅱uild:
+    # The type of runner that the jo🅱 will run on
+    runs-on: u🅱untu-latest
+
+    # Steps represent a sequence of tasks that will 🅱e executed as part of the jo🅱
+    steps:
+      # Checks-out your repository under $GITHU🅱_WORKSPACE, so your jo🅱 can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to 🅱uild,
+          echo test, and deploy your project.
